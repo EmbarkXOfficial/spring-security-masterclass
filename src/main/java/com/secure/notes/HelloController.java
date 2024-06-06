@@ -10,6 +10,11 @@ public class HelloController {
         return "Hello";
     }
 
+    @GetMapping("/contact")
+    public String sayContact(){
+        return "Contact";
+    }
+
     @GetMapping("/hi")
     public String sayHi(){
         return "Hi";
