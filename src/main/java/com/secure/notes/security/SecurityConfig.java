@@ -33,8 +33,8 @@ public class SecurityConfig {
                 -> requests
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated());
-        http.csrf(AbstractHttpConfigurer::disable);
-        //http.formLogin(withDefaults());
+//        http.csrf(AbstractHttpConfigurer::disable);
+        http.formLogin(withDefaults());
         http.httpBasic(withDefaults());
         return http.build();
     }
