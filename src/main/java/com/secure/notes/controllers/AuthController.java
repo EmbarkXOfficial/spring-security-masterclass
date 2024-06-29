@@ -45,10 +45,9 @@ public class AuthController {
             return new ResponseEntity<Object>(map, HttpStatus.NOT_FOUND);
         }
 
-//      set the authentication
+//      Set the authentication
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-// specific to our implemetation
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
         String jwtToken = jwtUtils.generateTokenFromUsername(userDetails);
