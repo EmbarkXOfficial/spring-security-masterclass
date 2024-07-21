@@ -18,10 +18,10 @@ public class PasswordResetToken {
     @Column(nullable = false)
     private Instant expiryDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
     private boolean used;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     public PasswordResetToken(String token, Instant expiryDate, User user) {
