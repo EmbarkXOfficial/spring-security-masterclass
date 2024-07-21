@@ -28,4 +28,6 @@ public interface UserService {
     void updatePassword(Long userId, String password);
 
     void generatePasswordResetToken(String email);
+
+    void resetPassword(String token, String newPassword);
 }
