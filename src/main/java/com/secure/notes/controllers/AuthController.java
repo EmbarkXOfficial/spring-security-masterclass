@@ -233,7 +233,7 @@ public class AuthController {
     }
 
 
-    @PostMapping("/user/2fa-status")
+    @GetMapping("/user/2fa-status")
     public ResponseEntity<?> get2FAStatus() {
         User user = authUtil.loggedInUser();
         if (user != null){
